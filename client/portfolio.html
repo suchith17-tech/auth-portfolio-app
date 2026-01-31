@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="box">
+      <h2>My Portfolio</h2>
+      <p id="user" style="text-align:center; font-weight:bold;"></p>
+
+      <div class="section">
+        <h3>About</h3>
+        <p>I am a passionate developer building full stack applications and learning every day.</p>
+      </div>
+
+      <div class="section">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Projects</h3>
+        <ul>
+          <li>Social Media App</li>
+          <li>Auth Portfolio App</li>
+        </ul>
+      </div>
+
+      <button onclick="logout()">Logout</button>
+    </div>
+
+  </div>
+
+  <script>
+    const userData = JSON.parse(localStorage.getItem("user"));
+
+    if (!userData) {
+      window.location = "index.html";
+    } else {
+      document.getElementById("user").innerText =
+        "Logged in as: " + userData.email;
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location = "index.html";
+    }
+  </script>
+
+</body>
+</html>
