@@ -45,7 +45,7 @@ async function login() {
 
     if (data.user) {
       localStorage.setItem("user", JSON.stringify(data.user));
-      window.location.href = "portfolio.html";
+      window.location.href = "/client/portfolio.html";
     } else {
       msg.innerText = data.message;
     }
