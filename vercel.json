@@ -3,7 +3,7 @@
         {
             "source": "/portfolio",
             "destination": "/client/portfolio.html"
-        }
+        },
         {
             "source": "/(.*)",
             "destination": "/client/index.html"
