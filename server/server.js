@@ -12,10 +12,10 @@ app.use(cors({
 
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect("mongodb+srv://test123:test123test@auth-cluster.aqlchno.mongodb.net/?appName=auth-cluster")
+// 🔒 MongoDB connection (from env)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
-  .catch(err => console.log(err));
+  .catch(err => console.log("MongoDB error:", err));
 
 // Import User model
 const User = require("./User");
@@ -51,7 +51,9 @@ app.post("/login", async (req, res) => {
   res.json({ message: "Login success", user });
 });
 
-// Start server
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+// 🌍 Use dynamic port for Vercel
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
 });
