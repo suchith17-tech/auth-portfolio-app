@@ -1,4 +1,10 @@
 {
+  "builds": [
+    {
+      "src": "client/index.html",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     { "src": "^/portfolio\\.html$", "dest": "/client/portfolio.html" },
     { "src": "^/script\\.js$", "dest": "/client/script.js" },
