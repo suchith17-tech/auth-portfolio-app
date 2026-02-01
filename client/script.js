@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:3000";
+const API = "https://auth-portfolio-api.onrender.com/";
 
 async function register() {
   const email = document.getElementById("rEmail").value;
