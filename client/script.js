@@ -1,4 +1,4 @@
-const API = "https://auth-portfolio-api.onrender.com/";
+const API = "https://auth-portfolio-api.onrender.com";
 
 async function register() {
   const email = document.getElementById("rEmail").value;
