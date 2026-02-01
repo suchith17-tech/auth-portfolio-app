@@ -1,5 +1,6 @@
 {
-    "framework": null,
-    "buildCommand": "",
-    "outputDirectory": "client"
+  "routes": [
+    { "src": "/client/portfolio.html", "dest": "/client/portfolio.html" },
+    { "src": "/(.*)", "dest": "/client/index.html" }
+  ]
 }
