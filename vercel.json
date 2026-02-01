@@ -1,8 +1,12 @@
 {
     "rewrites": [
         {
+            "source": "/portfolio",
+            "destination": "/client/portfolio.html"
+        }
+        {
             "source": "/(.*)",
-            "destination": "/index.html"
+            "destination": "/client/index.html"
         }
     ]
 }
