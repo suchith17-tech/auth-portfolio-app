@@ -1,12 +1,6 @@
 {
-    "rewrites": [
-        {
-            "source": "/portfolio",
-            "destination": "/client/portfolio.html"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/client/index.html"
-        }
-    ]
+  "rewrites": [
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
